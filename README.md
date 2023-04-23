@@ -7,12 +7,14 @@
 4. Go inside the container
 5. Stop the containe
 
-Solution
-docker run -d --name -p 8080:80 nginx nginx:alpine
-docker run -d -it --rm --name nginx -p 8080:80 nginx:alpine
-docker container logs -f nginx
-docker exec -it nginx sh
-docker container stop <container-name/id>
+*Solution*
+
+    docker run -d --name -p 8080:80 nginx nginx:alpine 
+    docker run -d -it --rm --name nginx -p 8080:80 nginx:alpine 
+    docker container logs -f nginx 
+    docker exec -it nginx sh 
+    docker container stop <container-name/id> 
+
 
 #### Assignment 2
 
@@ -26,33 +28,37 @@ Given that you have instructions to run the go-app ( in pre-requiste )
 Note:
 - use proper names for images, containers.
 
-Solution
-Dockerfile: https://github.com/userimack/go-app/commit/3ebc0d1c4844cd74836cf1a80f693823ae5bb67d
-Docker image link: https://hub.docker.com/r/userimack/go-app
-docker build -t userimack/go-app:v1 .
+*Solution* 
 
-docker run --rm -p 8080:8080 --name hello-app userimack/go-app:v1
+Dockerfile: https://github.com/userimack/go-app/commit/3ebc0d1c4844cd74836cf1a80f693823ae5bb67d 
+
+Docker image link: https://hub.docker.com/r/userimack/go-app
+
+    docker build -t userimack/go-app:v1 .
+    docker run --rm -p 8080:8080 --name hello-app userimack/go-app:v1
 
 #### Assignment 3
-￼
-Assignment
+
 1. Create a volumen, call it my_volume
 2. Create container and attach my_volume
 3. Change something in the volume folder
 4. Create a second container mounted with the same volume, check if file exists?
 
-Solution
-docker volume create my_volume
-docker run --rm -v my_volume:/data alpine sh -c 'date > /data/test'
-docker run --rm -v my_volume:/data alpine sh -c 'cat /data/test'
+*Solution*
 
-#### Assignment 4
-￼
+    docker volume create my_volume
+    docker run --rm -v my_volume:/data alpine sh -c 'date > /data/test'
+    docker run --rm -v my_volume:/data alpine sh -c 'cat /data/test'
+
+
+
+#### Assignment 4 
 1. Create docker-compose file for go-application
 2. docker-compose up
 3. Use / endpoint to check the service running
 4. Use /vote endpoint to add vote
 5. docker-compose down
 
-Solution
+*Solution*
+
 Docker Compose File: https://github.com/userimack/go-app/commit/3ebc0d1c4844cd74836cf1a80f693823ae5bb67d
