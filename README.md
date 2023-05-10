@@ -9,11 +9,11 @@
 
 *Solution*
 
-    docker run -d --name -p 8080:80 nginx nginx:alpine 
-    docker run -d -it --rm --name nginx -p 8080:80 nginx:alpine 
-    docker container logs -f nginx 
-    docker exec -it nginx sh 
-    docker container stop <container-name/id> 
+    docker run -d --name -p 8080:80 nginx nginx:alpine
+    docker run -d -it --rm --name nginx -p 8080:80 nginx:alpine
+    docker container logs -f nginx
+    docker exec -it nginx sh
+    docker container stop <container-name/id>
 
 
 #### Assignment 2
@@ -28,9 +28,10 @@ Given that you have instructions to run the go-app ( in pre-requiste )
 Note:
 - use proper names for images, containers.
 
-*Solution* 
+*Solution*
 
-Dockerfile: https://github.com/userimack/go-app/commit/3ebc0d1c4844cd74836cf1a80f693823ae5bb67d 
+Dokcerfile v0 (Simple): https://github.com/userimack/go-app/commit/f50a6c7dc4ee26e6dbd74a89b325c9ca9435554b
+Dockerfile v1 (multi-stage): https://github.com/userimack/go-app/commit/3ebc0d1c4844cd74836cf1a80f693823ae5bb67d
 
 Docker image link: https://hub.docker.com/r/userimack/go-app
 
@@ -52,7 +53,7 @@ Docker image link: https://hub.docker.com/r/userimack/go-app
 
 
 
-#### Assignment 4 
+#### Assignment 4
 1. Create docker-compose file for go-application
 2. docker-compose up
 3. Use / endpoint to check the service running
